@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NCCUCALENDAR.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="miappcal_sch">
+          <Key>
+            <PropertyRef Name="cal_id" />
+          </Key>
+          <Property Name="cal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="event" Type="nvarchar" MaxLength="100" />
+          <Property Name="event_desc" Type="nvarchar(max)" />
+          <Property Name="bgn_date" Type="datetime" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="cal_type" Type="nchar" MaxLength="1" />
+          <Property Name="is_important" Type="bit" />
+        </EntityType>
+        <EntityType Name="miapppushnotice_cal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ldap_id" Type="nvarchar" MaxLength="18" />
+          <Property Name="role_cod" Type="nchar" MaxLength="1" />
+          <Property Name="title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="body" Type="nvarchar" MaxLength="2000" />
+          <Property Name="inserted_date" Type="datetime" Nullable="false" />
+          <Property Name="set_pushdate" Type="datetime" />
+          <Property Name="istran" Type="bit" Nullable="false" />
+          <Property Name="tran_date" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'RUMISDB.dbo.MSsubscription_agents' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="MSsubscription_agents">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="publisher" />
+            <PropertyRef Name="publisher_db" />
+            <PropertyRef Name="publication" />
+            <PropertyRef Name="subscription_type" />
+            <PropertyRef Name="update_mode" />
+            <PropertyRef Name="failover_mode" />
+            <PropertyRef Name="spid" />
+            <PropertyRef Name="login_time" />
+            <PropertyRef Name="allow_subscription_copy" />
+            <PropertyRef Name="attach_state" />
+            <PropertyRef Name="attach_version" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="publisher" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="publisher_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="subscription_type" Type="int" Nullable="false" />
+          <Property Name="queue_id" Type="nvarchar" MaxLength="128" />
+          <Property Name="update_mode" Type="tinyint" Nullable="false" />
+          <Property Name="failover_mode" Type="bit" Nullable="false" />
+          <Property Name="spid" Type="int" Nullable="false" />
+          <Property Name="login_time" Type="datetime" Nullable="false" />
+          <Property Name="allow_subscription_copy" Type="bit" Nullable="false" />
+          <Property Name="attach_state" Type="int" Nullable="false" />
+          <Property Name="attach_version" Type="binary" MaxLength="16" Nullable="false" />
+          <Property Name="last_sync_status" Type="int" />
+          <Property Name="last_sync_summary" Type="nvarchar" MaxLength="128" />
+          <Property Name="last_sync_time" Type="datetime" />
+          <Property Name="queue_server" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityContainer Name="NCCUCALENDARStoreContainer">
+          <EntitySet Name="miappcal_sch" EntityType="Self.miappcal_sch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="miapppushnotice_cal" EntityType="Self.miapppushnotice_cal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MSsubscription_agents" EntityType="Self.MSsubscription_agents" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSsubscription_agents].[id] AS [id], 
+    [MSsubscription_agents].[publisher] AS [publisher], 
+    [MSsubscription_agents].[publisher_db] AS [publisher_db], 
+    [MSsubscription_agents].[publication] AS [publication], 
+    [MSsubscription_agents].[subscription_type] AS [subscription_type], 
+    [MSsubscription_agents].[queue_id] AS [queue_id], 
+    [MSsubscription_agents].[update_mode] AS [update_mode], 
+    [MSsubscription_agents].[failover_mode] AS [failover_mode], 
+    [MSsubscription_agents].[spid] AS [spid], 
+    [MSsubscription_agents].[login_time] AS [login_time], 
+    [MSsubscription_agents].[allow_subscription_copy] AS [allow_subscription_copy], 
+    [MSsubscription_agents].[attach_state] AS [attach_state], 
+    [MSsubscription_agents].[attach_version] AS [attach_version], 
+    [MSsubscription_agents].[last_sync_status] AS [last_sync_status], 
+    [MSsubscription_agents].[last_sync_summary] AS [last_sync_summary], 
+    [MSsubscription_agents].[last_sync_time] AS [last_sync_time], 
+    [MSsubscription_agents].[queue_server] AS [queue_server]
+    FROM [dbo].[MSsubscription_agents] AS [MSsubscription_agents]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NCCUCALENDAR" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="miappcal_sch">
+          <Key>
+            <PropertyRef Name="cal_id" />
+          </Key>
+          <Property Name="cal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="event" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="event_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bgn_date" Type="DateTime" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Precision="3" />
+          <Property Name="cal_type" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="is_important" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="miapppushnotice_cal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ldap_id" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="role_cod" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="body" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="inserted_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="set_pushdate" Type="DateTime" Precision="3" />
+          <Property Name="istran" Type="Boolean" Nullable="false" />
+          <Property Name="tran_date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="MSsubscription_agents">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="publisher" />
+            <PropertyRef Name="publisher_db" />
+            <PropertyRef Name="publication" />
+            <PropertyRef Name="subscription_type" />
+            <PropertyRef Name="update_mode" />
+            <PropertyRef Name="failover_mode" />
+            <PropertyRef Name="spid" />
+            <PropertyRef Name="login_time" />
+            <PropertyRef Name="allow_subscription_copy" />
+            <PropertyRef Name="attach_state" />
+            <PropertyRef Name="attach_version" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="publisher" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="publisher_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subscription_type" Type="Int32" Nullable="false" />
+          <Property Name="queue_id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="update_mode" Type="Byte" Nullable="false" />
+          <Property Name="failover_mode" Type="Boolean" Nullable="false" />
+          <Property Name="spid" Type="Int32" Nullable="false" />
+          <Property Name="login_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="allow_subscription_copy" Type="Boolean" Nullable="false" />
+          <Property Name="attach_state" Type="Int32" Nullable="false" />
+          <Property Name="attach_version" Type="Binary" MaxLength="16" FixedLength="true" Nullable="false" />
+          <Property Name="last_sync_status" Type="Int32" />
+          <Property Name="last_sync_summary" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="last_sync_time" Type="DateTime" Precision="3" />
+          <Property Name="queue_server" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="NccuCalendar1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="miappcal_sch" EntityType="Self.miappcal_sch" />
+          <EntitySet Name="miapppushnotice_cal" EntityType="Self.miapppushnotice_cal" />
+          <EntitySet Name="MSsubscription_agents" EntityType="Self.MSsubscription_agents" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NCCUCALENDARStoreContainer" CdmEntityContainer="NccuCalendar1">
+          <EntitySetMapping Name="miappcal_sch">
+            <EntityTypeMapping TypeName="NCCUCALENDAR.miappcal_sch">
+              <MappingFragment StoreEntitySet="miappcal_sch">
+                <ScalarProperty Name="cal_id" ColumnName="cal_id" />
+                <ScalarProperty Name="event" ColumnName="event" />
+                <ScalarProperty Name="event_desc" ColumnName="event_desc" />
+                <ScalarProperty Name="bgn_date" ColumnName="bgn_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="cal_type" ColumnName="cal_type" />
+                <ScalarProperty Name="is_important" ColumnName="is_important" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="miapppushnotice_cal">
+            <EntityTypeMapping TypeName="NCCUCALENDAR.miapppushnotice_cal">
+              <MappingFragment StoreEntitySet="miapppushnotice_cal">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ldap_id" ColumnName="ldap_id" />
+                <ScalarProperty Name="role_cod" ColumnName="role_cod" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="body" ColumnName="body" />
+                <ScalarProperty Name="inserted_date" ColumnName="inserted_date" />
+                <ScalarProperty Name="set_pushdate" ColumnName="set_pushdate" />
+                <ScalarProperty Name="istran" ColumnName="istran" />
+                <ScalarProperty Name="tran_date" ColumnName="tran_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSsubscription_agents">
+            <EntityTypeMapping TypeName="NCCUCALENDAR.MSsubscription_agents">
+              <MappingFragment StoreEntitySet="MSsubscription_agents">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="publisher_db" ColumnName="publisher_db" />
+                <ScalarProperty Name="publication" ColumnName="publication" />
+                <ScalarProperty Name="subscription_type" ColumnName="subscription_type" />
+                <ScalarProperty Name="queue_id" ColumnName="queue_id" />
+                <ScalarProperty Name="update_mode" ColumnName="update_mode" />
+                <ScalarProperty Name="failover_mode" ColumnName="failover_mode" />
+                <ScalarProperty Name="spid" ColumnName="spid" />
+                <ScalarProperty Name="login_time" ColumnName="login_time" />
+                <ScalarProperty Name="allow_subscription_copy" ColumnName="allow_subscription_copy" />
+                <ScalarProperty Name="attach_state" ColumnName="attach_state" />
+                <ScalarProperty Name="attach_version" ColumnName="attach_version" />
+                <ScalarProperty Name="last_sync_status" ColumnName="last_sync_status" />
+                <ScalarProperty Name="last_sync_summary" ColumnName="last_sync_summary" />
+                <ScalarProperty Name="last_sync_time" ColumnName="last_sync_time" />
+                <ScalarProperty Name="queue_server" ColumnName="queue_server" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

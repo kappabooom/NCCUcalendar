@@ -1,0 +1,252 @@
+﻿@{
+    ViewBag.Title = "國立政治大學校園行事曆";
+}
+
+<h2>NCCU校園行事曆</h2>
+<title>@ViewBag.Title</title>
+<div id="calender"></div>
+<br>
+<input id="test0" type="button" value="政大" style="width:50px;  height:50px;  font-family:微軟正黑體;  font-size: 16px;  border:2px;  background-color:#C1937D;  border-radius: 100px">
+<input id="test1" type="button" value="活動" style="width:50px;  height:50px;  font-family:微軟正黑體;  font-size: 16px;  border:2px;  background-color:#C1937D;  border-radius: 100px">
+<input id="test2" type="button" value="會議" style="width:50px;  height:50px;  font-family:微軟正黑體;  font-size: 16px;  border:2px;  background-color:#C1937D;  border-radius: 100px">
+<input id="testall" type="button" value="全部" style="width:50px;  height:50px;  font-family:微軟正黑體;  font-size: 16px;  border:2px;  background-color:#C1937D;  border-radius: 100px">
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><span id="eventTitle"></span></h4>
+            </div>
+            <div class="modal-body">
+                <p id="pDetails"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="toGoogle" data-dismiss="modal">匯入google行事曆</button>
+                <button type="button" class="btn btn-default" id='remind' data-dismiss="modal">提醒</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" rel="stylesheet" media="print" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/gcal.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+
+
+
+    <script>
+       
+
+        $(document).ready(function () {
+            var eventsall = [];
+            var events0 = [];
+            var events1 = [];
+            var events2 = [];
+            FetchEventAndRenderCalendar();
+            function FetchEventAndRenderCalendar() {
+                eventsall = [];
+                events0 = [];
+                events1 = [];
+                events2 = [];
+                $.ajax({
+                    type: "GET",
+                    url: "/home/GetEvents",
+                    success: function (data) {
+                        $.each(data, function (i, v) {
+                            eventsall.push({
+                                title: v.event,
+                                description: v.event_desc,
+                                start: moment(v.bgn_date).format('YYYYMMDD'),
+                                end: v.End != null ? moment(v.end_date) : moment(v.bgn_date).add(+1, 'days').format('YYYYMMDD'),
+                                color: v.cal_type == 1 ? '#F7B1AB' : v.cal_type == 0 ? '#98B589' : '#608EA0',
+                                type: v.cal_type == 1 ? '活動' : v.cal_type == 0 ? '政大' : '會議',
+                           
+                            });
+                        })                       
+
+                        $.each(data, function (i, v) {
+                            if (v.cal_type == 2) {
+                                events2.push({
+                                    title: v.event,
+                                    description: v.event_desc,
+                                    start: moment(v.bgn_date).format('YYYYMMDD'),
+                                    end: v.End != null ? moment(v.end_date + 1) : moment(v.bgn_date).add(+1, 'days').format('YYYYMMDD'),
+                                    color: v.cal_type == 1 ? '#F7B1AB' : v.cal_type == 0 ? '#98B589' : '#608EA0',
+                                    type: v.cal_type == 1 ? '活動' : v.cal_type == 0 ? '政大' : '會議'
+                                });
+                            }
+                            else if(v.cal_type == 0){
+                                events0.push({
+                                    title: v.event,
+                                    description: v.event_desc,
+                                    start: moment(v.bgn_date).format('YYYYMMDD'),
+                                    end: v.End != null ? moment(v.end_date) : moment(v.bgn_date).add(+1, 'days').format('YYYYMMDD'),
+                                    color: v.cal_type == 1 ? '#F7B1AB' : v.cal_type == 0 ? '#98B589' : '#608EA0',
+                                    type: v.cal_type == 1 ? '活動' : v.cal_type == 0 ? '政大' : '會議'
+                                });
+                            }
+                            else if (v.cal_type == 1) {
+                                events1.push({
+                                    title: v.event,
+                                    description: v.event_desc,
+                                    start: moment(v.bgn_date).format('YYYYMMDD'),
+                                    end: v.End != null ? moment(v.end_date) : moment(v.bgn_date).add(+1, 'days').format('YYYYMMDD'),
+                                    color: v.cal_type == 1 ? '#F7B1AB' : v.cal_type == 0 ? '#98B589' : '#608EA0',
+                                    type: v.cal_type == 1 ? '活動' : v.cal_type == 0 ? '政大' : '會議'
+                                });
+                            }
+                        })
+                    
+                        GenerateCalender(eventsall);
+                    
+                        $(test0).click(function () {
+                            GenerateCalender(events0);
+                        });
+                        $(test1).click(function () {
+                            GenerateCalender(events1);
+                        });
+                        $(test2).click(function () {
+                            GenerateCalender(events2);
+                        });
+                        $(testall).click(function () {
+                            GenerateCalender(eventsall);
+                        });
+
+
+                    },
+                    error: function (error) {
+                        alert('failed');
+                    }
+                })
+
+            }
+
+
+
+
+
+            function formatCalDate(dtStr) {
+                try {
+                    var date = defaultConv.parse(dtStr);
+                    var gcalFmt = new AnyTime.Converter({ format: gcalDateFormat, utcFormatOffsetImposed: 0 });
+                    return gcalFmt.format(date);
+                } catch (e) {
+                    return '';
+                }
+            }
+
+            function GenerateCalender(events) {
+                $('#calender').fullCalendar('destroy');
+                $('#calender').fullCalendar({
+                    views: {
+                        listDay: { buttonText: 'day' },
+                        listWeek: { buttonText: 'week' }
+                    },
+
+                    defaultView: 'listWeek',
+                    displayEventTime: false,
+                    googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+                    contentHeight: 700,
+                    defaultDate: new Date(),
+                    timeFormat: 'H(:mm)',
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,listWeek,listDay'
+                    },
+                    eventLimit: true,
+                    eventColor: '#F56960',
+                    events: events,
+                    eventClick: function (calEvent, jsEvent, view) {
+                        selectedEvent = calEvent;
+                        $('#myModal #eventTitle').text(calEvent.title);
+
+                        function makeGCalLink() {
+                            var link;
+                            //var link2 = calEvent.start + calEvent.description;
+                            var d1 = moment(calEvent.start).format('YYYYMMDD');
+                            var d2 = moment(calEvent.end).format('YYYYMMDD');
+                            link = 'http://www.google.com/calendar/event?action=TEMPLATE';
+                            link += '&dates=' + d1 + '/' + d2;
+                            link += '&text=' + calEvent.title;
+                            link += '&details=' +calEvent.description;
+                            console.log(link);
+                            location.reload();
+                            window.open(link);
+                            link = '';
+                            return false;
+                        };
+                        $('#toGoogle').click(function(calEvent, jsEvent, view){
+                            //window.open(calEvent.link);
+                            makeGCalLink();
+                            //calEvent = null;                   
+                            //GenerateCalender(eventsall);
+                        });
+
+                        
+                        $('#remind').click(function (calEvent, jsEvent, view) {
+                            var idTest = '103703051';
+                            var notice = {
+                                ldap_id: idTest,
+                                role_cod : null,
+                                title: 'dsd',
+                                body: 'asas',
+                                inserted_date: '20170728',
+                                set_pushdate: '20170728 16:00',
+                                istran: false,
+                                tran_date : null
+                            };
+                            addPushNotice(notice);
+                            console.log('OKOKOK');
+
+                        });
+                        
+                    var $description = $('<div/>');
+                    $description.append($('<p/>').html('<b>Date:</b>' + calEvent.start.format('YYYYMMDD')));
+                    /*if (calEvent.end != null) {
+                        $description.append($('<p/>').html('<b>End:</b>' + calEvent.end.format("YYYYMMDD ")));
+                    }*/
+                    $description.append($('<p/>').html('<b>Description:</b>' + calEvent.description));
+                    $description.append($('<p/>').html('<b>Type:</b>' + calEvent.type));
+                    $('#myModal #pDetails').empty().html($description);
+
+                    $('#myModal').modal();
+                    }
+                
+                })
+            }
+
+
+            function addPushNotice(data) {
+                $.ajax({
+                    type: "POST",
+                    url: '/home/addPushNotice',
+                    data: data,
+                    success: function (data) {
+                        if (data.status) {
+                            //Refresh the calender
+                            FetchEventAndRenderCalendar();
+                            $('#myModalSave').modal('hide');
+                        }
+                    },
+                    error: function () {
+                        alert('pushFailed');
+                    }
+                })
+            }
+
+
+
+
+        })
+    </script>
+}

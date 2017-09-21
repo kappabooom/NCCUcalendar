@@ -1,0 +1,180 @@
+c:\users\nccu\documents\visual studio 2015\Projects\calendar\calendar\obj\Debug\calendar.csprojResolveAssemblyReference.cache
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\ApplicationInsights.config
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\csc.exe
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\vbc.exe
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\VBCSCompiler.exe
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\calendar.dll.config
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\calendar.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\calendar.pdb
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\EntityFramework.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\EntityFramework.SqlServer.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.Web.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.ApplicationInsights.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\MySql.Data.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\MySql.Data.Entity.EF6.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Helpers.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Mvc.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Razor.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Webpages.Deployment.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Webpages.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Webpages.Razor.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\EntityFramework.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\EntityFramework.SqlServer.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.Web.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.ApplicationInsights.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Razor.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Webpages.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Webpages.Deployment.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Webpages.Razor.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Helpers.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\System.Web.Mvc.xml
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\System.Web.Webpages.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\obj\Debug\calendar.dll
+C:\Users\nccu\Documents\Visual Studio 2015\Projects\calendar\calendar\obj\Debug\calendar.pdb
+C:\Users\nccu\Desktop\calendar\calendar\bin\ApplicationInsights.config
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\csc.exe
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\vbc.exe
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\VBCSCompiler.exe
+C:\Users\nccu\Desktop\calendar\calendar\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nccu\Desktop\calendar\calendar\bin\calendar.dll.config
+C:\Users\nccu\Desktop\calendar\calendar\bin\calendar.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\calendar.pdb
+C:\Users\nccu\Desktop\calendar\calendar\bin\EntityFramework.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\EntityFramework.SqlServer.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.Web.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.ApplicationInsights.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\MySql.Data.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\MySql.Data.Entity.EF6.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Helpers.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Mvc.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Razor.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Webpages.Deployment.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Webpages.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Webpages.Razor.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\EntityFramework.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\EntityFramework.SqlServer.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.Web.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.ApplicationInsights.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Razor.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Webpages.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Webpages.Deployment.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Webpages.Razor.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Helpers.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\System.Web.Mvc.xml
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\System.Web.Webpages.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\nccu\Desktop\calendar\calendar\obj\Debug\calendar.csprojResolveAssemblyReference.cache
+C:\Users\nccu\Desktop\calendar\calendar\obj\Debug\calendar.dll
+C:\Users\nccu\Desktop\calendar\calendar\obj\Debug\calendar.pdb
+C:\Users\nccu\Desktop\try_google\calendar\bin\ApplicationInsights.config
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\csc.exe
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\vbc.exe
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\VBCSCompiler.exe
+C:\Users\nccu\Desktop\try_google\calendar\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nccu\Desktop\try_google\calendar\bin\calendar.dll.config
+C:\Users\nccu\Desktop\try_google\calendar\bin\calendar.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\calendar.pdb
+C:\Users\nccu\Desktop\try_google\calendar\bin\EntityFramework.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\EntityFramework.SqlServer.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.Web.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.ApplicationInsights.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\MySql.Data.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\MySql.Data.Entity.EF6.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Helpers.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Mvc.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Razor.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Webpages.Deployment.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Webpages.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Webpages.Razor.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\EntityFramework.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\EntityFramework.SqlServer.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.Web.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.ApplicationInsights.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Razor.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Webpages.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Webpages.Deployment.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Webpages.Razor.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Helpers.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\System.Web.Mvc.xml
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\System.Web.Webpages.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\System.Web.Webpages.Deployment.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\System.Web.Webpages.Razor.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\nccu\Desktop\try_google\calendar\obj\Debug\calendar.csprojResolveAssemblyReference.cache
+C:\Users\nccu\Desktop\try_google\calendar\obj\Debug\calendar.dll
+C:\Users\nccu\Desktop\try_google\calendar\obj\Debug\calendar.pdb

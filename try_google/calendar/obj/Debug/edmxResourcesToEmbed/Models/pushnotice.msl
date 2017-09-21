@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RUMISDBModel1StoreContainer" CdmEntityContainer="RUMISDBEntities1">
+    <EntitySetMapping Name="miapppushnotice_cal">
+      <EntityTypeMapping TypeName="RUMISDBModel1.miapppushnotice_cal">
+        <MappingFragment StoreEntitySet="miapppushnotice_cal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ldap_id" ColumnName="ldap_id" />
+          <ScalarProperty Name="role_cod" ColumnName="role_cod" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="inserted_date" ColumnName="inserted_date" />
+          <ScalarProperty Name="set_pushdate" ColumnName="set_pushdate" />
+          <ScalarProperty Name="istran" ColumnName="istran" />
+          <ScalarProperty Name="tran_date" ColumnName="tran_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

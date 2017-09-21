@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NCCUCALENDARStoreContainer" CdmEntityContainer="NccuCalendar1">
+    <EntitySetMapping Name="miappcal_sch">
+      <EntityTypeMapping TypeName="NCCUCALENDAR.miappcal_sch">
+        <MappingFragment StoreEntitySet="miappcal_sch">
+          <ScalarProperty Name="cal_id" ColumnName="cal_id" />
+          <ScalarProperty Name="event" ColumnName="event" />
+          <ScalarProperty Name="event_desc" ColumnName="event_desc" />
+          <ScalarProperty Name="bgn_date" ColumnName="bgn_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="cal_type" ColumnName="cal_type" />
+          <ScalarProperty Name="is_important" ColumnName="is_important" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="miapppushnotice_cal">
+      <EntityTypeMapping TypeName="NCCUCALENDAR.miapppushnotice_cal">
+        <MappingFragment StoreEntitySet="miapppushnotice_cal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ldap_id" ColumnName="ldap_id" />
+          <ScalarProperty Name="role_cod" ColumnName="role_cod" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="inserted_date" ColumnName="inserted_date" />
+          <ScalarProperty Name="set_pushdate" ColumnName="set_pushdate" />
+          <ScalarProperty Name="istran" ColumnName="istran" />
+          <ScalarProperty Name="tran_date" ColumnName="tran_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSsubscription_agents">
+      <EntityTypeMapping TypeName="NCCUCALENDAR.MSsubscription_agents">
+        <MappingFragment StoreEntitySet="MSsubscription_agents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="publisher_db" ColumnName="publisher_db" />
+          <ScalarProperty Name="publication" ColumnName="publication" />
+          <ScalarProperty Name="subscription_type" ColumnName="subscription_type" />
+          <ScalarProperty Name="queue_id" ColumnName="queue_id" />
+          <ScalarProperty Name="update_mode" ColumnName="update_mode" />
+          <ScalarProperty Name="failover_mode" ColumnName="failover_mode" />
+          <ScalarProperty Name="spid" ColumnName="spid" />
+          <ScalarProperty Name="login_time" ColumnName="login_time" />
+          <ScalarProperty Name="allow_subscription_copy" ColumnName="allow_subscription_copy" />
+          <ScalarProperty Name="attach_state" ColumnName="attach_state" />
+          <ScalarProperty Name="attach_version" ColumnName="attach_version" />
+          <ScalarProperty Name="last_sync_status" ColumnName="last_sync_status" />
+          <ScalarProperty Name="last_sync_summary" ColumnName="last_sync_summary" />
+          <ScalarProperty Name="last_sync_time" ColumnName="last_sync_time" />
+          <ScalarProperty Name="queue_server" ColumnName="queue_server" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

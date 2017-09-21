@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RUMISDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="miapppushnotice_cal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ldap_id" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="role_cod" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="body" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="inserted_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="set_pushdate" Type="DateTime" Precision="3" />
+    <Property Name="istran" Type="Boolean" Nullable="false" />
+    <Property Name="tran_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="RUMISDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="miapppushnotice_cal" EntityType="Self.miapppushnotice_cal" />
+  </EntityContainer>
+</Schema>

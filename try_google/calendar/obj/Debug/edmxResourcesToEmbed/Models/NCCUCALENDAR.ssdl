@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NCCUCALENDAR.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="miappcal_sch">
+    <Key>
+      <PropertyRef Name="cal_id" />
+    </Key>
+    <Property Name="cal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="event" Type="nvarchar" MaxLength="100" />
+    <Property Name="event_desc" Type="nvarchar(max)" />
+    <Property Name="bgn_date" Type="datetime" />
+    <Property Name="end_date" Type="datetime" />
+    <Property Name="cal_type" Type="nchar" MaxLength="1" />
+    <Property Name="is_important" Type="bit" />
+  </EntityType>
+  <EntityType Name="miapppushnotice_cal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ldap_id" Type="nvarchar" MaxLength="18" />
+    <Property Name="role_cod" Type="nchar" MaxLength="1" />
+    <Property Name="title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="body" Type="nvarchar" MaxLength="2000" />
+    <Property Name="inserted_date" Type="datetime" Nullable="false" />
+    <Property Name="set_pushdate" Type="datetime" />
+    <Property Name="istran" Type="bit" Nullable="false" />
+    <Property Name="tran_date" Type="datetime" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'RUMISDB.dbo.MSsubscription_agents' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="MSsubscription_agents">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="publisher" />
+      <PropertyRef Name="publisher_db" />
+      <PropertyRef Name="publication" />
+      <PropertyRef Name="subscription_type" />
+      <PropertyRef Name="update_mode" />
+      <PropertyRef Name="failover_mode" />
+      <PropertyRef Name="spid" />
+      <PropertyRef Name="login_time" />
+      <PropertyRef Name="allow_subscription_copy" />
+      <PropertyRef Name="attach_state" />
+      <PropertyRef Name="attach_version" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="publisher" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="publisher_db" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="publication" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="subscription_type" Type="int" Nullable="false" />
+    <Property Name="queue_id" Type="nvarchar" MaxLength="128" />
+    <Property Name="update_mode" Type="tinyint" Nullable="false" />
+    <Property Name="failover_mode" Type="bit" Nullable="false" />
+    <Property Name="spid" Type="int" Nullable="false" />
+    <Property Name="login_time" Type="datetime" Nullable="false" />
+    <Property Name="allow_subscription_copy" Type="bit" Nullable="false" />
+    <Property Name="attach_state" Type="int" Nullable="false" />
+    <Property Name="attach_version" Type="binary" MaxLength="16" Nullable="false" />
+    <Property Name="last_sync_status" Type="int" />
+    <Property Name="last_sync_summary" Type="nvarchar" MaxLength="128" />
+    <Property Name="last_sync_time" Type="datetime" />
+    <Property Name="queue_server" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityContainer Name="NCCUCALENDARStoreContainer">
+    <EntitySet Name="miappcal_sch" EntityType="Self.miappcal_sch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="miapppushnotice_cal" EntityType="Self.miapppushnotice_cal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSsubscription_agents" EntityType="Self.MSsubscription_agents" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MSsubscription_agents].[id] AS [id], 
+    [MSsubscription_agents].[publisher] AS [publisher], 
+    [MSsubscription_agents].[publisher_db] AS [publisher_db], 
+    [MSsubscription_agents].[publication] AS [publication], 
+    [MSsubscription_agents].[subscription_type] AS [subscription_type], 
+    [MSsubscription_agents].[queue_id] AS [queue_id], 
+    [MSsubscription_agents].[update_mode] AS [update_mode], 
+    [MSsubscription_agents].[failover_mode] AS [failover_mode], 
+    [MSsubscription_agents].[spid] AS [spid], 
+    [MSsubscription_agents].[login_time] AS [login_time], 
+    [MSsubscription_agents].[allow_subscription_copy] AS [allow_subscription_copy], 
+    [MSsubscription_agents].[attach_state] AS [attach_state], 
+    [MSsubscription_agents].[attach_version] AS [attach_version], 
+    [MSsubscription_agents].[last_sync_status] AS [last_sync_status], 
+    [MSsubscription_agents].[last_sync_summary] AS [last_sync_summary], 
+    [MSsubscription_agents].[last_sync_time] AS [last_sync_time], 
+    [MSsubscription_agents].[queue_server] AS [queue_server]
+    FROM [dbo].[MSsubscription_agents] AS [MSsubscription_agents]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

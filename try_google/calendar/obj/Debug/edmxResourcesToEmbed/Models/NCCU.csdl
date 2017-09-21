@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RUMISDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="miappcal_sch">
+    <Key>
+      <PropertyRef Name="cal_id" />
+    </Key>
+    <Property Name="cal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="event" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="event_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bgn_date" Type="DateTime" Precision="3" />
+    <Property Name="end_date" Type="DateTime" Precision="3" />
+    <Property Name="cal_type" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="is_important" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="MSsubscription_agents">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="publisher" />
+      <PropertyRef Name="publisher_db" />
+      <PropertyRef Name="publication" />
+      <PropertyRef Name="subscription_type" />
+      <PropertyRef Name="update_mode" />
+      <PropertyRef Name="failover_mode" />
+      <PropertyRef Name="spid" />
+      <PropertyRef Name="login_time" />
+      <PropertyRef Name="allow_subscription_copy" />
+      <PropertyRef Name="attach_state" />
+      <PropertyRef Name="attach_version" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="publisher" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="publisher_db" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="publication" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subscription_type" Type="Int32" Nullable="false" />
+    <Property Name="queue_id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="update_mode" Type="Byte" Nullable="false" />
+    <Property Name="failover_mode" Type="Boolean" Nullable="false" />
+    <Property Name="spid" Type="Int32" Nullable="false" />
+    <Property Name="login_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="allow_subscription_copy" Type="Boolean" Nullable="false" />
+    <Property Name="attach_state" Type="Int32" Nullable="false" />
+    <Property Name="attach_version" Type="Binary" MaxLength="16" FixedLength="true" Nullable="false" />
+    <Property Name="last_sync_status" Type="Int32" />
+    <Property Name="last_sync_summary" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="last_sync_time" Type="DateTime" Precision="3" />
+    <Property Name="queue_server" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="RUMISDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="miappcal_sch" EntityType="Self.miappcal_sch" />
+    <EntitySet Name="MSsubscription_agents" EntityType="Self.MSsubscription_agents" />
+  </EntityContainer>
+</Schema>
